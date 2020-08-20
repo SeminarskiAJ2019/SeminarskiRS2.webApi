@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="SeminarskiRS2.MobileApp.Views.PlacanjeInfoPage">
+    <ContentPage.BindingContext>
+        <viewModels:CreditCardVM></viewModels:CreditCardVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="loadingOverlay">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" />
+            </Grid>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="success" IsVisible="False">
+                <StackLayout>
+                    <Image Source="success.png"></Image>
+                </StackLayout>
+                <Label HorizontalOptions="CenterAndExpand" x:Name="successmsg"></Label>
+                <Button Text="Provjerite informacije ulaznice" Clicked="Button_Clicked" BackgroundColor="LightGreen"></Button>
+            </StackLayout>
+            <StackLayout  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="fail" IsVisible="False">
+                <Label HorizontalOptions="CenterAndExpand" x:Name="failmsg"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

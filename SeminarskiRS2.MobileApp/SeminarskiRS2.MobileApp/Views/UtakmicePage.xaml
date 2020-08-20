@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
+             x:Class="SeminarskiRS2.MobileApp.Views.UtakmicePage">
+    <ContentPage.BindingContext>
+        <viewModels:UtakmiceViewModel></viewModels:UtakmiceViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Utakmice"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Picker ItemsSource="{Binding LigeList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedLiga}"></Picker>
+            <ListView ItemsSource="{Binding UtakmiceList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="8">
+                                <Label Text="{Binding UtakmicaPodaci}"
+                                       
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       FontSize="15"/>
+                                <Label Text="{Binding stadion}"
+                                       
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="12"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

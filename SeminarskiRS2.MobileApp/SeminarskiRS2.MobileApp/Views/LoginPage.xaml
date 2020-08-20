@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
+             x:Class="SeminarskiRS2.MobileApp.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel></vm:LoginViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Margin="20">
+                <Image Source="logo.png"></Image>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30" >
+
+                <Label  Text="Korisničko ime"></Label>
+
+                <Entry x:Name="KorisnickoIme" Text="{Binding KorisnickoIme}"></Entry>
+
+                <Label  Text="Password"></Label>
+                <Entry Text="{Binding Lozinka}" IsPassword="True"></Entry>
+
+                <StackLayout Margin="0,20,0,0">
+                    <Button Command="{Binding LoginCommand}"  HorizontalOptions="FillAndExpand" Text="Login"></Button>
+                    <ActivityIndicator IsRunning="{Binding IsBusy}"></ActivityIndicator>
+                    <Button Text="Registriraj se" Clicked="Button_Clicked"
+                    BackgroundColor="LightGreen" ></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

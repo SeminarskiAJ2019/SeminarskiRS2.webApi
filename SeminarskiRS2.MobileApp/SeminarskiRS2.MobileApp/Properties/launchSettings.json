@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SeminarskiRS2.MobileApp": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="SeminarskiRS2.MobileApp.Views.PocetnaPage">
+    <ContentPage.BindingContext>
+        <viewModels:PreporuceneUtakmiceVM></viewModels:PreporuceneUtakmiceVM>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="logo.png"></Image>
+            </StackLayout>
+            <StackLayout>
+                <Label FontSize="Title" HorizontalOptions="Center" Text="Informacijski sistem za košarkaške stadione"/>
+            </StackLayout>
+            <StackLayout x:Name="preporuka" IsVisible="False" >
+                <StackLayout>
+                    <Label Margin="30" FontSize="Medium" HorizontalOptions="CenterAndExpand">Preporučene utakmice</Label>
+                </StackLayout>
+                <StackLayout>
+                    <ListView ItemsSource="{Binding UtakmiceList}" ItemSelected="ListView_ItemSelected_1">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="10">
+                                        <Label Text="{Binding UtakmicaPodaci}" 
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                                        <Label Text="{Binding stadion}" 
+                                d:Text="Item descripton"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

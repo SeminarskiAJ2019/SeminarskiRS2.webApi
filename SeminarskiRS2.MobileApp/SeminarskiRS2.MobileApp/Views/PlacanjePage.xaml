@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="SeminarskiRS2.MobileApp.Views.PlacanjePage">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="creditcard.jpg"></Image>
+                </StackLayout>
+                <StackLayout x:Name="creditcard" HorizontalOptions="FillAndExpand">
+                    <Entry TextChanged="Ccn_TextChanged" x:Name="ccn" Placeholder="Unesite broj kartice"></Entry>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Entry TextChanged="Exm_TextChanged" x:Name="exm" Placeholder="Mjesec isteka"></Entry>
+                        <Entry TextChanged="Exy_TextChanged" x:Name="exy" Placeholder="Godina isteka"></Entry>
+                        <Entry TextChanged="Cvv_TextChanged" x:Name="cvv" Placeholder="CVV"></Entry>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="0,20,0,0">
+                    <Button x:Name="btn" BackgroundColor="LightGreen" Text="Uplati iznos" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Label x:Name="greska"></Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
