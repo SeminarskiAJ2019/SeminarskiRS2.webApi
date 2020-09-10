@@ -40,9 +40,9 @@ namespace SeminarskiRS2.WinUI.Utakmice
         }
         private void dgvUtakmice_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvUtakmice.SelectedRows[0].Cells[0].Value;
-            var frm = new frmUtakmiceDetalji(int.Parse(id.ToString()));
-            frm.Show();
+            //var id = dgvUtakmice.SelectedRows[0].Cells[0].Value;
+            //var frm = new frmUtakmiceDetalji(int.Parse(id.ToString()));
+            //frm.Show();
         }
 
         private async void frmUtakmice_Load(object sender, EventArgs e)

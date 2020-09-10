@@ -1,0 +1,33 @@
+version: '3' 
+services:
+#mssql docker
+  seminarskirs2.webapi-sql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - seminarskirs2.webapinet
+
+  seminarskirs2.webapi-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:SeminarskiRS2=Server=seminarskirs2.webapi-sql,1433;Database=IB170120Baza;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+    ports:
+      - 5000:5050
+    networks:
+      - seminarskirs2.webapinet      
+    links:
+      - seminarskirs2.webapi-sql
+    depends_on:
+      - seminarskirs2.webapi-sql
+      
+networks:
+  seminarskirs2.webapinet:
+    driver: bridge      

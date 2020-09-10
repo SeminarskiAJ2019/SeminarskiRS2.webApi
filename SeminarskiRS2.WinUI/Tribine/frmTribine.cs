@@ -32,9 +32,9 @@ namespace SeminarskiRS2.WinUI.Tribine
 
         private void dgvTribine_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvTribine.SelectedRows[0].Cells[0].Value;
-            var frm = new frmTribineDetalji(int.Parse(id.ToString()));
-            frm.Show();
+            //var id = dgvTribine.SelectedRows[0].Cells[0].Value;
+            //var frm = new frmTribineDetalji(int.Parse(id.ToString()));
+            //frm.Show();
         }
     }
 }

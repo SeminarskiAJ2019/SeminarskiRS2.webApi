@@ -34,9 +34,9 @@ namespace SeminarskiRS2.WinUI.Korisnici
 
         private void dgvKorisnici_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvKorisnici.SelectedRows[0].Cells[0].Value;
-            var frm = new frmKorisniciDetalji(int.Parse(id.ToString()));
-            frm.Show();
+            //var id = dgvKorisnici.SelectedRows[0].Cells[0].Value;
+            //var frm = new frmKorisniciDetalji(int.Parse(id.ToString()));
+            //frm.Show();
         }
     }
 }

@@ -40,9 +40,9 @@ namespace SeminarskiRS2.WinUI.Stadioni
         }
         private void dgvStadioni_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvStadioni.SelectedRows[0].Cells[0].Value;
-            var frm = new frmStadioniDetalji(int.Parse(id.ToString()));
-            frm.Show();
+            //var id = dgvStadioni.SelectedRows[0].Cells[0].Value;
+            //var frm = new frmStadioniDetalji(int.Parse(id.ToString()));
+            //frm.Show();
         }
 
         private async void frmStadioni_Load(object sender, EventArgs e)

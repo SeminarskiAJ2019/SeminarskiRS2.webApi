@@ -45,9 +45,9 @@ namespace SeminarskiRS2.WinUI.Lige
 
         private void dgvLige_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvLige.SelectedRows[0].Cells[0].Value;
-            var frm = new frmLigeDetalji(int.Parse(id.ToString()));
-            frm.Show();
+            //var id = dgvLige.SelectedRows[0].Cells[0].Value;
+            //var frm = new frmLigeDetalji(int.Parse(id.ToString()));
+            //frm.Show();
         }
 
         private async void cbDrzave_SelectedIndexChanged(object sender, EventArgs e)

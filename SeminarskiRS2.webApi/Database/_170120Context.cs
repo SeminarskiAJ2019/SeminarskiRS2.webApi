@@ -318,6 +318,8 @@ namespace SeminarskiRS2.webApi.Database
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Utakmice__Stadio__5812160E");
             });
+            OnModelCreatingPartial(modelBuilder);
         }
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
