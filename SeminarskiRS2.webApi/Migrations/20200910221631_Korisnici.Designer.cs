@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeminarskiRS2.webApi.Database;
 
 namespace SeminarskiRS2.webApi.Migrations
 {
     [DbContext(typeof(_170120Context))]
-    partial class _170120ContextModelSnapshot : ModelSnapshot
+    [Migration("20200910221631_Korisnici")]
+    partial class Korisnici
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
