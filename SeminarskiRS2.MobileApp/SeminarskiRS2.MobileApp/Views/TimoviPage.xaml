@@ -20,7 +20,7 @@
             <Label Text="Timovi"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-
+            <Label Text="Odaberite ligu"/>
             <Picker ItemsSource="{Binding LigeList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedLiga}"></Picker>
             <ListView ItemsSource="{Binding TimoviList}"  ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>

@@ -11,7 +11,7 @@
         <StackLayout Padding="20">
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
                 <StackLayout>
-                    <Image Source="creditcard.jpg"></Image>
+                    <Image Source="Assets/creditcard.png"></Image>
                 </StackLayout>
                 <StackLayout x:Name="creditcard" HorizontalOptions="FillAndExpand">
                     <Entry TextChanged="Ccn_TextChanged" x:Name="ccn" Placeholder="Unesite broj kartice"></Entry>

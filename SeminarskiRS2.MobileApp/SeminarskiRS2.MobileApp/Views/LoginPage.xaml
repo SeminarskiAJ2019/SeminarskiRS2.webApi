@@ -9,11 +9,17 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <StackLayout Margin="20">
-                <Image Source="logo.png"></Image>
-            </StackLayout>
+           
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="30" >
+                <Label Text="Informacijski sistem za košarkaške arene" FontSize="25" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
 
+                
+                
+                <Image Source="Assets/logo.png"></Image>
+                
+                
+                
+                
                 <Label  Text="Korisničko ime"></Label>
 
                 <Entry x:Name="KorisnickoIme" Text="{Binding KorisnickoIme}"></Entry>

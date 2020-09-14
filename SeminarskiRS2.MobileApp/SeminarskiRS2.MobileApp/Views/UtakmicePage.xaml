@@ -10,6 +10,7 @@
             <Label Text="Utakmice"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="Odaberite ligu"/>
             <Picker ItemsSource="{Binding LigeList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedLiga}"></Picker>
             <ListView ItemsSource="{Binding UtakmiceList}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>

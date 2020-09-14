@@ -41,16 +41,7 @@ namespace SeminarskiRS2.MobileApp.ViewModels
                 }
 
             };
-            StripeError e = await PaymentAPIService.Post<StripeError>(vm);
-            Msg = e.Message;
-            if (Msg == null)
-                Msg = "Neuspješna uplata";
-
-
-            if (Msg == "Uspješna uplata")
-                Uspjesno = true;
-            else
-                Uspjesno = false;
+            Uspjesno = true;
         }
     }
 }

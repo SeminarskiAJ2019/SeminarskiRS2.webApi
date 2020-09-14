@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Image Source="logo.png"></Image>
+                <Image Source="Assets/logo.png"></Image>
             </StackLayout>
             <StackLayout>
                 <Label FontSize="Title" HorizontalOptions="Center" Text="Informacijski sistem za košarkaške stadione"/>

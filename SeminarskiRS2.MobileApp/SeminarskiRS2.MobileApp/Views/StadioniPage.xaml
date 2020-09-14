@@ -20,7 +20,7 @@
             <Label Text="Stadioni"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-
+            <Label Text="Odaberi grad"/>
             <Picker ItemsSource="{Binding GradoviList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedGrad}"></Picker>
             <ListView ItemsSource="{Binding StadioniList}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>

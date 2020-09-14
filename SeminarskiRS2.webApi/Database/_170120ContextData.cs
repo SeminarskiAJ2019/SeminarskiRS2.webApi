@@ -177,8 +177,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv="Milan arena",
                 GradId=1,
                 Opis="Arena u Milanu",
-                Slika=null,
-                SlikaThumb=null,
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Stadioni>().HasData(new webApi.Database.Stadioni()
             {
@@ -186,8 +186,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv = "Zagreb arena",
                 GradId = 2,
                 Opis = "Arena u Zagrebu",
-                Slika = null,
-                SlikaThumb = null,
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Stadioni>().HasData(new webApi.Database.Stadioni()
             {
@@ -195,8 +195,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv = "Madrid arena",
                 GradId = 3,
                 Opis = "Arena u Madridu",
-                Slika = null,
-                SlikaThumb = null,
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Stadioni>().HasData(new webApi.Database.Stadioni()
             {
@@ -204,8 +204,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv = "London arena",
                 GradId = 4,
                 Opis = "Arena u Londonu",
-                Slika = null,
-                SlikaThumb = null,
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Stadioni>().HasData(new webApi.Database.Stadioni()
             {
@@ -213,8 +213,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv = "Ankara arena",
                 GradId = 5,
                 Opis = "Arena u Ankari",
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Stadioni>().HasData(new webApi.Database.Stadioni()
             {
@@ -222,8 +222,8 @@ namespace SeminarskiRS2.webApi.Database
                 Naziv = "LA arena",
                 GradId = 6,
                 Opis = "Arena u LA-u",
-                Slika = null,
-                SlikaThumb = null,
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Tribine>().HasData(new webApi.Database.Tribine()
             {
@@ -358,8 +358,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis="Tim iz Milana",
                 StadionId=1,
                 LigaId=1,
-                Slika=null,
-                SlikaThumb=null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
@@ -368,8 +368,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis = "Tim iz Zagreba",
                 StadionId = 2,
                 LigaId = 2,
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
@@ -378,8 +378,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis = "Tim iz Madrida",
                 StadionId = 3,
                 LigaId = 3,
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
@@ -388,8 +388,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis = "Tim iz Londona",
                 StadionId = 4,
                 LigaId = 4,
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
@@ -398,8 +398,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis = "Tim iz Ankare",
                 StadionId = 5,
                 LigaId = 5,
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
@@ -408,8 +408,8 @@ namespace SeminarskiRS2.webApi.Database
                 Opis = "Tim iz Los Angelesa",
                 StadionId = 6,
                 LigaId = 6,
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Utakmice>().HasData(new webApi.Database.Utakmice()
             {
@@ -421,8 +421,8 @@ namespace SeminarskiRS2.webApi.Database
                 VrijemeOdigravanja = new DateTime(2021, 8, 21, 16, 30, 0),
                 StadionId = 1,
                 Dateonly = new DateTime(2021, 8, 21),
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
             modelBuilder.Entity<Utakmice>().HasData(new webApi.Database.Utakmice()
             {
@@ -434,8 +434,8 @@ namespace SeminarskiRS2.webApi.Database
                 VrijemeOdigravanja = new DateTime(2021, 9, 24, 15, 30, 0),
                 StadionId = 3,
                 Dateonly = new DateTime(2021, 9, 24),
-                Slika = null,
-                SlikaThumb = null
+                Slika = File.ReadAllBytes("img/no_image.jpeg"),
+                SlikaThumb = File.ReadAllBytes("img/no_image.jpeg")
             });
         }
     }
