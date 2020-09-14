@@ -12,7 +12,7 @@ namespace SeminarskiRS2.webApi.Database
 
         public int UtakmicaId { get; set; }
         public int DomaciTimId { get; set; }
-        public string Utakmica { get { return DomaciTim.Naziv + "-" + GostujuciTim.Naziv + " - " + DatumOdigravanja.ToShortDateString(); } }
+       // public string Utakmica { get { return DomaciTim.Naziv + "-" + GostujuciTim.Naziv + " - " + DatumOdigravanja.ToShortDateString(); } }
         public int GostujuciTimId { get; set; }
         public int LigaId { get; set; }
         public DateTime DatumOdigravanja { get; set; }

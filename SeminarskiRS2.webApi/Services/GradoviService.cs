@@ -27,6 +27,8 @@ namespace SeminarskiRS2.webApi.Services
             }
             var list = q.ToList();
             return _mapper.Map<List<Model.Grad>>(list);
+          
+            
         }
     }
 }

@@ -28,6 +28,7 @@ namespace SeminarskiRS2.webApi
    
     public class Startup
     {
+        public static string ConnectionString { get; private set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -80,7 +81,7 @@ namespace SeminarskiRS2.webApi
             //registracija
             services.AddScoped<GradoviService, GradoviService>();
             services.AddScoped<DrzaveService, DrzaveService>();
-
+            ConnectionString = Configuration.GetConnectionString("SeminarskiRS2");
             var connection = Configuration.GetConnectionString("SeminarskiRS2");
             services.AddDbContext<_170120Context>(options => options.UseSqlServer(connection));
         }

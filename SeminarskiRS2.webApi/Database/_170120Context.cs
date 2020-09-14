@@ -34,7 +34,7 @@ namespace SeminarskiRS2.webApi.Database
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.;Database=170120;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(Startup.ConnectionString);
             }
         }
 
@@ -198,9 +198,9 @@ namespace SeminarskiRS2.webApi.Database
 
                 entity.Property(e => e.Naziv).IsRequired();
 
-                entity.Property(e => e.Slika).IsRequired();
+                //entity.Property(e => e.Slika).IsRequired();
 
-                entity.Property(e => e.SlikaThumb).IsRequired();
+                //entity.Property(e => e.SlikaThumb).IsRequired();
 
                 entity.Property(e => e.StadionId).HasColumnName("StadionID");
 

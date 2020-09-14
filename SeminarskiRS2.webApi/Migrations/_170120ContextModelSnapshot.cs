@@ -35,12 +35,12 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.ToTable("Drzave");
 
                     b.HasData(
-                        new { DrzavaId = 15, Naziv = "Italija" },
-                        new { DrzavaId = 16, Naziv = "Hrvatska" },
-                        new { DrzavaId = 17, Naziv = "Spanjolska" },
-                        new { DrzavaId = 18, Naziv = "Engleska" },
-                        new { DrzavaId = 19, Naziv = "Turska" },
-                        new { DrzavaId = 20, Naziv = "USA" }
+                        new { DrzavaId = 1, Naziv = "Italija" },
+                        new { DrzavaId = 2, Naziv = "Hrvatska" },
+                        new { DrzavaId = 3, Naziv = "Spanjolska" },
+                        new { DrzavaId = 4, Naziv = "Engleska" },
+                        new { DrzavaId = 5, Naziv = "Turska" },
+                        new { DrzavaId = 6, Naziv = "USA" }
                     );
                 });
 
@@ -65,12 +65,12 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.ToTable("Gradovi");
 
                     b.HasData(
-                        new { GradId = 15, DrzavaId = 15, Naziv = "Milan" },
-                        new { GradId = 16, DrzavaId = 16, Naziv = "Zagreb" },
-                        new { GradId = 17, DrzavaId = 17, Naziv = "Madrid" },
-                        new { GradId = 18, DrzavaId = 18, Naziv = "London" },
-                        new { GradId = 19, DrzavaId = 19, Naziv = "Ankara" },
-                        new { GradId = 20, DrzavaId = 20, Naziv = "Los Angeles" }
+                        new { GradId = 1, DrzavaId = 1, Naziv = "Milan" },
+                        new { GradId = 2, DrzavaId = 2, Naziv = "Zagreb" },
+                        new { GradId = 3, DrzavaId = 3, Naziv = "Madrid" },
+                        new { GradId = 4, DrzavaId = 4, Naziv = "London" },
+                        new { GradId = 5, DrzavaId = 5, Naziv = "Ankara" },
+                        new { GradId = 6, DrzavaId = 6, Naziv = "LA" }
                     );
                 });
 
@@ -113,9 +113,9 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.ToTable("Korisnici");
 
                     b.HasData(
-                        new { KorisnikId = 15, DatumRodjenja = new DateTime(2010, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "desktop@gmail.com", GradId = 18, Ime = "desktop", KorisnickoIme = "desktop", LozinkaHash = "WkDpmQdJY7Fp8ukYrHwcohsiVfk=", LozinkaSalt = "W0GsP0kOtaIuNnWf0pKUOQ==", Prezime = "desktop", Telefon = "063632111" },
-                        new { KorisnikId = 16, DatumRodjenja = new DateTime(2011, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "mobile@gmail.com", GradId = 16, Ime = "mobile", KorisnickoIme = "mobile", LozinkaHash = "6OthA4yW5YlV5MCiV/0+CoCEzpk=", LozinkaSalt = "e8wjoTUAilCeb4wFryfE8g==", Prezime = "mobile", Telefon = "063632141" },
-                        new { KorisnikId = 17, DatumRodjenja = new DateTime(2009, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "dockertest@gmail.com", GradId = 17, Ime = "dockertest", KorisnickoIme = "dockertest", LozinkaHash = "7g1bfb5eXLNfU8olg0VjBvuVVZw=", LozinkaSalt = "cgJNHMDenErZaFm1jxD1ow==", Prezime = "dockertest", Telefon = "063654123" }
+                        new { KorisnikId = 1, DatumRodjenja = new DateTime(2010, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "desktop@gmail.com", GradId = 1, Ime = "desktop", KorisnickoIme = "desktop", LozinkaHash = "bCbqfwyD35VbHKO8ZoXXhSjV5CQ=", LozinkaSalt = "JZ4UjebF/tcu822vsvHG2g==", Prezime = "desktop", Telefon = "063632111" },
+                        new { KorisnikId = 2, DatumRodjenja = new DateTime(2011, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "mobile@gmail.com", GradId = 2, Ime = "mobile", KorisnickoIme = "mobile", LozinkaHash = "Vsq2WKiuYz1tubqr0SAjaqjH7Io=", LozinkaSalt = "EXSTSqHwDLseCIbEsrgRHQ==", Prezime = "mobile", Telefon = "063632141" },
+                        new { KorisnikId = 3, DatumRodjenja = new DateTime(2009, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), Email = "dockertest@gmail.com", GradId = 3, Ime = "dockertest", KorisnickoIme = "dockertest", LozinkaHash = "q6/V2/BSCVcJY8eriC1xflGBWbw=", LozinkaSalt = "Ly4nw1XxDrgD4pwXCdXKjQ==", Prezime = "dockertest", Telefon = "063654123" }
                     );
                 });
 
@@ -137,6 +137,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("DrzavaId");
 
                     b.ToTable("Lige");
+
+                    b.HasData(
+                        new { LigaId = 1, DrzavaId = 1, Naziv = "Italija A1" },
+                        new { LigaId = 2, DrzavaId = 2, Naziv = "Hrvatska B1" },
+                        new { LigaId = 3, DrzavaId = 3, Naziv = "Spanjolska A1" },
+                        new { LigaId = 4, DrzavaId = 4, Naziv = "Engleska A1" },
+                        new { LigaId = 5, DrzavaId = 5, Naziv = "Turska B1" },
+                        new { LigaId = 6, DrzavaId = 6, Naziv = "NBA" }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Preporuke", b =>
@@ -181,6 +190,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("TribinaId");
 
                     b.ToTable("Sektori");
+
+                    b.HasData(
+                        new { SektorId = 1, Naziv = "A", TribinaId = 1 },
+                        new { SektorId = 2, Naziv = "A", TribinaId = 2 },
+                        new { SektorId = 3, Naziv = "A", TribinaId = 3 },
+                        new { SektorId = 4, Naziv = "A", TribinaId = 4 },
+                        new { SektorId = 5, Naziv = "A", TribinaId = 5 },
+                        new { SektorId = 6, Naziv = "A", TribinaId = 6 }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Sjedala", b =>
@@ -203,6 +221,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("SektorId");
 
                     b.ToTable("Sjedala");
+
+                    b.HasData(
+                        new { SjedaloId = 1, Oznaka = "1", SektorId = 1, Status = false },
+                        new { SjedaloId = 2, Oznaka = "2", SektorId = 2, Status = false },
+                        new { SjedaloId = 3, Oznaka = "3", SektorId = 3, Status = false },
+                        new { SjedaloId = 4, Oznaka = "4", SektorId = 4, Status = false },
+                        new { SjedaloId = 5, Oznaka = "5", SektorId = 5, Status = false },
+                        new { SjedaloId = 6, Oznaka = "6", SektorId = 6, Status = false }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Stadioni", b =>
@@ -229,6 +256,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("GradId");
 
                     b.ToTable("Stadioni");
+
+                    b.HasData(
+                        new { StadionId = 1, GradId = 1, Naziv = "Milan arena", Opis = "Arena u Milanu" },
+                        new { StadionId = 2, GradId = 2, Naziv = "Zagreb arena", Opis = "Arena u Zagrebu" },
+                        new { StadionId = 3, GradId = 3, Naziv = "Madrid arena", Opis = "Arena u Madridu" },
+                        new { StadionId = 4, GradId = 4, Naziv = "London arena", Opis = "Arena u Londonu" },
+                        new { StadionId = 5, GradId = 5, Naziv = "Ankara arena", Opis = "Arena u Ankari" },
+                        new { StadionId = 6, GradId = 6, Naziv = "LA arena", Opis = "Arena u LA-u" }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Timovi", b =>
@@ -246,11 +282,9 @@ namespace SeminarskiRS2.webApi.Migrations
 
                     b.Property<string>("Opis");
 
-                    b.Property<byte[]>("Slika")
-                        .IsRequired();
+                    b.Property<byte[]>("Slika");
 
-                    b.Property<byte[]>("SlikaThumb")
-                        .IsRequired();
+                    b.Property<byte[]>("SlikaThumb");
 
                     b.Property<int>("StadionId")
                         .HasColumnName("StadionID");
@@ -262,6 +296,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("StadionId");
 
                     b.ToTable("Timovi");
+
+                    b.HasData(
+                        new { TimId = 1, LigaId = 1, Naziv = "Milan tim", Opis = "Tim iz Milana", StadionId = 1 },
+                        new { TimId = 2, LigaId = 2, Naziv = "Cibona", Opis = "Tim iz Zagreba", StadionId = 2 },
+                        new { TimId = 3, LigaId = 3, Naziv = "Real Madrid", Opis = "Tim iz Madrida", StadionId = 3 },
+                        new { TimId = 4, LigaId = 4, Naziv = "London tim", Opis = "Tim iz Londona", StadionId = 4 },
+                        new { TimId = 5, LigaId = 5, Naziv = "Ankara tim", Opis = "Tim iz Ankare", StadionId = 5 },
+                        new { TimId = 6, LigaId = 6, Naziv = "LA Lakers", Opis = "Tim iz Los Angelesa", StadionId = 6 }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Tribine", b =>
@@ -284,6 +327,15 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("StadionId");
 
                     b.ToTable("Tribine");
+
+                    b.HasData(
+                        new { TribinaId = 1, Cijena = 40m, Naziv = "Milan Sjeverna", StadionId = 1 },
+                        new { TribinaId = 2, Cijena = 40m, Naziv = "Zagreb Sjeverna", StadionId = 2 },
+                        new { TribinaId = 3, Cijena = 40m, Naziv = "Madrid Sjeverna", StadionId = 3 },
+                        new { TribinaId = 4, Cijena = 40m, Naziv = "London Sjeverna", StadionId = 4 },
+                        new { TribinaId = 5, Cijena = 40m, Naziv = "Ankara Sjeverna", StadionId = 5 },
+                        new { TribinaId = 6, Cijena = 40m, Naziv = "LA North", StadionId = 6 }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Ulaznice", b =>
@@ -378,6 +430,11 @@ namespace SeminarskiRS2.webApi.Migrations
                     b.HasIndex("StadionId");
 
                     b.ToTable("Utakmice");
+
+                    b.HasData(
+                        new { UtakmicaId = 1, Dateonly = new DateTime(2021, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), DatumOdigravanja = new DateTime(2021, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), DomaciTimId = 1, GostujuciTimId = 2, LigaId = 1, StadionId = 1, VrijemeOdigravanja = new DateTime(2021, 8, 21, 16, 30, 0, 0, DateTimeKind.Unspecified) },
+                        new { UtakmicaId = 2, Dateonly = new DateTime(2021, 9, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), DatumOdigravanja = new DateTime(2021, 9, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), DomaciTimId = 3, GostujuciTimId = 4, LigaId = 3, StadionId = 3, VrijemeOdigravanja = new DateTime(2021, 9, 24, 15, 30, 0, 0, DateTimeKind.Unspecified) }
+                    );
                 });
 
             modelBuilder.Entity("SeminarskiRS2.webApi.Database.Gradovi", b =>

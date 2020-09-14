@@ -11,7 +11,7 @@ using SeminarskiRS2.webApi.Services;
 
 namespace SeminarskiRS2.webApi.Controllers
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class KorisniciController : ControllerBase

@@ -102,7 +102,7 @@ namespace SeminarskiRS2.webApi.Mappers
                .ForMember(s => s.utakmica, a =>
                 a.MapFrom(b => new Database._170120Context().Utakmice
                 .Include(s => s.DomaciTim).Include(s => s.GostujuciTim)
-                .FirstOrDefault(s => s.UtakmicaId == b.UtakmicaId).Utakmica))
+                .FirstOrDefault(s => s.UtakmicaId == b.UtakmicaId).DomaciTim.Naziv))
 
                .ForMember(s => s.korisnik, a =>
                 a.MapFrom(b => new Database._170120Context().Korisnici.Find(b.KorisnikId).Korisnik))

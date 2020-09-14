@@ -18,7 +18,7 @@ services:
     build:
       context: .
     environment:
-      - ConnectionStrings:SeminarskiRS2=Server=seminarskirs2.webapi-sql,1433;Database=IB170120Baza;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+      - ConnectionStrings:SeminarskiRS2=Server=seminarskirs2.webapi-sql,1433;Database=IB170120DDocker;User=sa;Password=QWElkj132!;ConnectRetryCount=0
     ports:
       - 5000:5050
     networks:
