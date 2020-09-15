@@ -12,5 +12,6 @@ RUN dotnet publish "SeminarskiRS2.webApi" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+ADD ./SeminarskiRS2.webApi/img ./img
 
 ENTRYPOINT ["dotnet", "SeminarskiRS2.webApi.dll"]
