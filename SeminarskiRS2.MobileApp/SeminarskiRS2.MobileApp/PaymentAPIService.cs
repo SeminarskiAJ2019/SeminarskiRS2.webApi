@@ -15,7 +15,7 @@ namespace SeminarskiRS2.MobileApp
         private readonly string _route;
 
 #if DEBUG
-        private readonly string _apiUrl = "http://localhost:62049/api";
+        private readonly string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
         private string apiUrl = "https://mywebsite.com/api";
