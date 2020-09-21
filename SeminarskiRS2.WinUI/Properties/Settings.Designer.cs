@@ -25,7 +25,7 @@ namespace SeminarskiRS2.WinUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:62049/api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5000/api")]
         public string APIUrl {
             get {
                 return ((string)(this["APIUrl"]));

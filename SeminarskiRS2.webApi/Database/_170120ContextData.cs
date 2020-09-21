@@ -351,6 +351,48 @@ namespace SeminarskiRS2.webApi.Database
                 SektorId = 6,
                 Status = false
             });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 7,
+                Oznaka = "7",
+                SektorId = 1,
+                Status = false
+            });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 8,
+                Oznaka = "8",
+                SektorId = 2,
+                Status = false
+            });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 9,
+                Oznaka = "9",
+                SektorId = 3,
+                Status = false
+            });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 10,
+                Oznaka = "10",
+                SektorId = 4,
+                Status = false
+            });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 11,
+                Oznaka = "11",
+                SektorId = 5,
+                Status = false
+            });
+            modelBuilder.Entity<Sjedala>().HasData(new webApi.Database.Sjedala()
+            {
+                SjedaloId = 12,
+                Oznaka = "12",
+                SektorId = 6,
+                Status = false
+            });
             modelBuilder.Entity<Timovi>().HasData(new webApi.Database.Timovi()
             {
                 TimId=1,
