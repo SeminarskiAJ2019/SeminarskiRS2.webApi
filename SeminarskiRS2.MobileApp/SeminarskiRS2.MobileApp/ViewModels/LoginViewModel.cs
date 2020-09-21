@@ -45,6 +45,7 @@ namespace SeminarskiRS2.MobileApp.ViewModels
             }
             catch(Exception ex)
             {
+               // await Application.Current.MainPage.DisplayAlert("Greška", "Niste authentificrani", "OK");
                 IsBusy = false;
             }
         }

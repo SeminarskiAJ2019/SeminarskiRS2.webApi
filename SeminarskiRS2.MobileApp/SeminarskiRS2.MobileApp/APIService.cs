@@ -15,7 +15,7 @@ namespace SeminarskiRS2.MobileApp
         public static string Lozinka { get; set; }
         private string _route = null;
 #if DEBUG
-        private string _apiUrl = "http://localhost:62049/api";
+        private string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
          private string _apiUrl = "https://mywebsite.com/api/";
