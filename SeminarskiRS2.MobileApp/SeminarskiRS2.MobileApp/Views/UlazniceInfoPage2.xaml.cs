@@ -18,7 +18,9 @@ namespace SeminarskiRS2.MobileApp.Views
         public UlazniceInfoPage2(Ulaznice ulaznica)
         {
             InitializeComponent();
-            BindingContext = UlaznicaSimpleDetailVM = new UlaznicaSimpleDetailVM() { ulaznica = ulaznica };
+            BindingContext = UlaznicaSimpleDetailVM = new UlaznicaSimpleDetailVM() { ulaznica = ulaznica,
+            Code= "Sjedalo: " + ulaznica.Oznaka + "/ Sektor: " + ulaznica.sektor + "/ Datum kupnje:" + ulaznica.DatumKupnje.ToString() + "/ Vrijeme kupnje" + ulaznica.VrijemeKupnje.ToString()
+        };
         }
         protected override void OnAppearing()
         {

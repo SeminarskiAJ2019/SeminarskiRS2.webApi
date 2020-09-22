@@ -8,5 +8,6 @@ namespace SeminarskiRS2.MobileApp.ViewModels
     public class UlaznicaSimpleDetailVM : BaseViewModel
     {
         public Ulaznice ulaznica { get; set; }
+        public string Code { get; set; }
     }
 }

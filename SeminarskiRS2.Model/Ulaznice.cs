@@ -18,7 +18,6 @@ namespace SeminarskiRS2.Model
         public string korisnik { get; set; }
         public DateTime DatumKupnje { get; set; }
         public DateTime VrijemeKupnje { get; set; }
-        public byte[] barcodeimg { get; set; }
         public string color { get; set; }
     }
 }

@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:SeminarskiRS2.MobileApp.ViewModels"
-             xmlns:local="clr-namespace:SeminarskiRS2.MobileApp.Converters"
+             xmlns:local="clr-namespace:SeminarskiRS2.MobileApp.Converters" xmlns:forms="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms" xmlns:common="clr-namespace:ZXing.Common;assembly=zxing.portable"
              mc:Ignorable="d"
              x:Class="SeminarskiRS2.MobileApp.Views.UlazniceInfoPage2">
     <ContentPage.BindingContext>
@@ -37,10 +37,15 @@
             <StackLayout BackgroundColor="{Binding ulaznica.color}" HeightRequest="40">
 
             </StackLayout>
-
-            <StackLayout>
-                <Image HeightRequest="150" Source="{Binding ulaznica.barcodeimg,Converter={StaticResource imgConv}}"></Image>
-            </StackLayout>
+            <forms:ZXingBarcodeImageView
+                BarcodeValue="{Binding Code}"
+                BarcodeFormat="QR_CODE"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <forms:ZXingBarcodeImageView.BarcodeOptions>
+                <common:EncodingOptions Width="200" Height="200"/>
+                </forms:ZXingBarcodeImageView.BarcodeOptions>
+            </forms:ZXingBarcodeImageView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

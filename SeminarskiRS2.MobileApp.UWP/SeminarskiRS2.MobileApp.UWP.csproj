@@ -159,6 +159,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>4.8.0.1269</Version>
     </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeminarskiRS2.MobileApp\SeminarskiRS2.MobileApp\SeminarskiRS2.MobileApp.csproj">

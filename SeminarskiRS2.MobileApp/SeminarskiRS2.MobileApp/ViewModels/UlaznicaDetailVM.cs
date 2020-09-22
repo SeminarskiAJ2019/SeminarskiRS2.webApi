@@ -1,7 +1,9 @@
-﻿using SeminarskiRS2.Model;
+﻿using QRCoder;
+using SeminarskiRS2.Model;
 using SeminarskiRS2.Model.Requests;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,7 +36,6 @@ namespace SeminarskiRS2.MobileApp.ViewModels
         private readonly APIService _apiServiceUplate = new APIService("Uplate");
 
         public Ulaznice Ulaznica { get; set; }
-        public byte[] Barcode { get; set; }
         public UlaznicaDetailVM()
         {
             InitCommand = new Command(async () => await Init());
@@ -69,7 +70,6 @@ namespace SeminarskiRS2.MobileApp.ViewModels
             {
                 u = await _apiServiceUlaznice.Insert<Ulaznice>(req);
                 await _apiServiceSjedala.Update<dynamic>(req.SjedaloID, req2);
-                Barcode = u.barcodeimg;
 
             }
             catch (Exception)

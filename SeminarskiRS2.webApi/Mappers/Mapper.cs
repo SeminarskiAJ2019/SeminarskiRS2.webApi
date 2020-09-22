@@ -34,7 +34,7 @@ namespace SeminarskiRS2.webApi.Mappers
             CreateMap<Database.Uplate, Model.Uplate>()
                 .ForMember(s => s.UplataPodaci, a => a.MapFrom(b => new Database._170120Context()
                 .Ulaznice.Include(s => s.Utakmica.DomaciTim).Include(s => s.Utakmica.GostujuciTim).Include(s => s.Korisnik).FirstOrDefault(s => s.UlaznicaId == b.UlaznicaId).UlaznicaPodaci))
-                .ForMember(s => s.Iznos, a => a.MapFrom(b => new Database._170120Context().Uplate.FirstOrDefault(s => s.UplataId == b.UplataId).Iznos / 100));
+                .ForMember(s => s.Iznos, a => a.MapFrom(b => new Database._170120Context().Uplate.FirstOrDefault(s => s.UplataId == b.UplataId).Iznos));
 
             CreateMap<Database.Uplate, Model.Requests.UplateInsertRequest>().ReverseMap();
 
