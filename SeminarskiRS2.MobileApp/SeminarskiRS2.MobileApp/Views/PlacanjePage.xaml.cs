@@ -87,7 +87,7 @@ namespace SeminarskiRS2.MobileApp.Views
         {
             //1298|1267|4512|4567|8901|8933|
             //postaviti cemo stripe pocetke testnih kartica
-            var cardCheck = new Regex(@"^(4242|4000|5000|2223|5200|5150|3782|3714|6011|3056|3622|3566|6200)([\-\s]?[0-9]{4}){3}$");
+            var cardCheck = new Regex(@"^([0-9]{4})([\-\s]?[0-9]{4}){3}$");
             if (!cardCheck.IsMatch(this.ccn.Text)) // <1>check card number is valid
             {
                 this.greska.IsVisible = true;
