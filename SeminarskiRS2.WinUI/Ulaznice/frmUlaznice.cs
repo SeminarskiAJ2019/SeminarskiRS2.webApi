@@ -39,9 +39,9 @@ namespace SeminarskiRS2.WinUI.Ulaznice
         }
         private void dgvUlaznice_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvUlaznice.SelectedRows[0].Cells[0].Value;
-            //frmUlazniceDetalji frm = new frmUlazniceDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvUlaznice.SelectedRows[0].Cells[0].Value;
+            frmUlazniceDetalji frm = new frmUlazniceDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
 
         private async void cbKorisniciPretraga_SelectedIndexChanged(object sender, EventArgs e)

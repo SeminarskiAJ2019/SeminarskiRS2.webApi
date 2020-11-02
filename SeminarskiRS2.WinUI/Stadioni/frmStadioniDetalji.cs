@@ -135,8 +135,7 @@ namespace SeminarskiRS2.WinUI.Stadioni
 
             else
             {
-                MessageBox.Show("Operacija nije uspjela");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela, morate unijeti sva polja. ");
             }
         }
 
@@ -166,13 +165,13 @@ namespace SeminarskiRS2.WinUI.Stadioni
         {
             if (string.IsNullOrEmpty(txtNaziv.Text))
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtNaziv, "Polje naziv je obavezno. ");
                 e.Cancel = true;
 
             }
             else if (!Regex.IsMatch(txtNaziv.Text, @"^[a-zA-Z ]+$")) //samoslova
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtNaziv, "Dozvoljeno je koristiti samo slova. ");
                 e.Cancel = true;
             }
             else
@@ -183,7 +182,7 @@ namespace SeminarskiRS2.WinUI.Stadioni
         {
             if (string.IsNullOrWhiteSpace(txtOpis.Text))
             {
-                errorProvider1.SetError(txtOpis, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtOpis, "Polje opis je obavezno. ");
                 e.Cancel = true;
 
             }
@@ -195,33 +194,31 @@ namespace SeminarskiRS2.WinUI.Stadioni
         {
             if (string.IsNullOrWhiteSpace(txtlat.Text))
             {
-                errorProvider1.SetError(txtlat, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtlat, "Polje latituda je obavezno. ");
                 e.Cancel = true;
 
             }
             else
-                errorProvider1.SetError(txtlng
-                    , null);
+                errorProvider1.SetError(txtlat, null);
         }
 
         private void txtlng_Validating_1(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtlng.Text))
             {
-                errorProvider1.SetError(txtlng, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtlng, "Polje longituda je obavezno. ");
                 e.Cancel = true;
 
             }
             else
-                errorProvider1.SetError(txtlng
-                    , null);
+                errorProvider1.SetError(txtlng, null);
         }
 
         private void cbGradovi_Validating_1(object sender, CancelEventArgs e)
         {
             if (cbGradovi.SelectedItem == null)
             {
-                errorProvider1.SetError(cbGradovi, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbGradovi, "Morate odabrati grad. ");
                 e.Cancel = true;
 
             }

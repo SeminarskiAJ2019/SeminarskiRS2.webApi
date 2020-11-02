@@ -31,11 +31,11 @@
             this.txtPretraga = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvGradovi = new System.Windows.Forms.DataGridView();
-            this.btnPretrazi = new System.Windows.Forms.Button();
             this.GradID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DrzavaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPretrazi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGradovi)).BeginInit();
             this.SuspendLayout();
@@ -71,19 +71,10 @@
             this.dgvGradovi.Location = new System.Drawing.Point(3, 16);
             this.dgvGradovi.Name = "dgvGradovi";
             this.dgvGradovi.ReadOnly = true;
+            this.dgvGradovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGradovi.Size = new System.Drawing.Size(770, 334);
             this.dgvGradovi.TabIndex = 0;
             this.dgvGradovi.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvGradovi_MouseDoubleClick);
-            // 
-            // btnPretrazi
-            // 
-            this.btnPretrazi.Location = new System.Drawing.Point(678, 39);
-            this.btnPretrazi.Name = "btnPretrazi";
-            this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
-            this.btnPretrazi.TabIndex = 2;
-            this.btnPretrazi.Text = "Pretraži";
-            this.btnPretrazi.UseVisualStyleBackColor = true;
-            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // GradID
             // 
@@ -114,6 +105,16 @@
             this.Drzava.HeaderText = "Naziv Države";
             this.Drzava.Name = "Drzava";
             this.Drzava.ReadOnly = true;
+            // 
+            // btnPretrazi
+            // 
+            this.btnPretrazi.Location = new System.Drawing.Point(678, 39);
+            this.btnPretrazi.Name = "btnPretrazi";
+            this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
+            this.btnPretrazi.TabIndex = 2;
+            this.btnPretrazi.Text = "Pretraži";
+            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // frmGradovi
             // 

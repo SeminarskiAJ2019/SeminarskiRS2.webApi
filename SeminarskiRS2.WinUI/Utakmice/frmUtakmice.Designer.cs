@@ -90,6 +90,7 @@
             this.dgvUtakmice.Location = new System.Drawing.Point(3, 16);
             this.dgvUtakmice.Name = "dgvUtakmice";
             this.dgvUtakmice.ReadOnly = true;
+            this.dgvUtakmice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUtakmice.Size = new System.Drawing.Size(846, 343);
             this.dgvUtakmice.TabIndex = 0;
             this.dgvUtakmice.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvUtakmice_MouseDoubleClick);

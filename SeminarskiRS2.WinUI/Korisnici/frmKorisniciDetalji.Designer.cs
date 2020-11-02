@@ -214,6 +214,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
             // 
             // comboBox
             // 
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Location = new System.Drawing.Point(30, 267);
             this.comboBox.Name = "comboBox";

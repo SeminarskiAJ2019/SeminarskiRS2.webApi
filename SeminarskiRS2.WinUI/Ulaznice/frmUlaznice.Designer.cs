@@ -82,6 +82,7 @@
             this.dgvUlaznice.Location = new System.Drawing.Point(3, 16);
             this.dgvUlaznice.Name = "dgvUlaznice";
             this.dgvUlaznice.ReadOnly = true;
+            this.dgvUlaznice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUlaznice.Size = new System.Drawing.Size(770, 325);
             this.dgvUlaznice.TabIndex = 0;
             this.dgvUlaznice.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvUlaznice_MouseDoubleClick);

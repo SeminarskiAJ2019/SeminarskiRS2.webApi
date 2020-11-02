@@ -250,8 +250,7 @@ namespace SeminarskiRS2.WinUI.Ulaznice
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela!");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
         }
 
@@ -321,7 +320,7 @@ namespace SeminarskiRS2.WinUI.Ulaznice
         {
             if (cbUtakmica.SelectedItem == null)
             {
-                errorProvider1.SetError(cbUtakmica, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbUtakmica, "Morate odabrati utakmicu. ");
                 e.Cancel = true;
             }
             else
@@ -330,14 +329,20 @@ namespace SeminarskiRS2.WinUI.Ulaznice
 
         private void cbSektor_Validating(object sender, CancelEventArgs e)
         {
-
+            if (cbSektor.SelectedItem == null)
+            {
+                errorProvider1.SetError(cbSektor, "Morate odabrati sektor. ");
+                e.Cancel = true;
+            }
+            else
+                errorProvider1.SetError(cbSektor, null);
         }
 
         private void cbSjedala_Validating(object sender, CancelEventArgs e)
         {
             if (cbSjedala.SelectedItem == null)
             {
-                errorProvider1.SetError(cbSjedala, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbSjedala, "Morate odabrati sjedalo. ");
             }
             else
                 errorProvider1.SetError(cbSjedala, null);
@@ -347,7 +352,7 @@ namespace SeminarskiRS2.WinUI.Ulaznice
         {
             if (cbKorisnik.SelectedItem == null)
             {
-                errorProvider1.SetError(cbKorisnik, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbKorisnik, "Morate odabrati korisnika. ");
                 e.Cancel = true;
             }
             else
@@ -358,7 +363,7 @@ namespace SeminarskiRS2.WinUI.Ulaznice
         {
             if (string.IsNullOrEmpty(dtpDatum.Value.ToString()))
             {
-                errorProvider1.SetError(dtpDatum, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(dtpDatum, "Morate odabrati datum. ");
                 e.Cancel = true;
             }
             else
@@ -369,7 +374,7 @@ namespace SeminarskiRS2.WinUI.Ulaznice
         {
             if (string.IsNullOrEmpty(dtpVrijeme.Value.ToString()))
             {
-                errorProvider1.SetError(dtpVrijeme, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(dtpVrijeme, "Morate odabrati vrijeme. ");
                 e.Cancel = true;
             }
             else

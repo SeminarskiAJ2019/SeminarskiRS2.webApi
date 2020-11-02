@@ -48,6 +48,7 @@
             // 
             // cbTribine
             // 
+            this.cbTribine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTribine.FormattingEnabled = true;
             this.cbTribine.Location = new System.Drawing.Point(89, 108);
             this.cbTribine.Name = "cbTribine";

@@ -33,9 +33,9 @@ namespace SeminarskiRS2.WinUI.Gradovi
 
         private void dgvGradovi_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvGradovi.SelectedRows[0].Cells[0].Value;
-            //var frm = new frmGradoviDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvGradovi.SelectedRows[0].Cells[0].Value;
+            var frm = new frmGradoviDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
     }
 }

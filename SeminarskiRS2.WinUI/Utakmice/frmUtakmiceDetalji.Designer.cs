@@ -52,6 +52,7 @@
             // 
             // cbDomaci
             // 
+            this.cbDomaci.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDomaci.FormattingEnabled = true;
             this.cbDomaci.Location = new System.Drawing.Point(66, 38);
             this.cbDomaci.Name = "cbDomaci";
@@ -61,6 +62,7 @@
             // 
             // cbGosti
             // 
+            this.cbGosti.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGosti.FormattingEnabled = true;
             this.cbGosti.Location = new System.Drawing.Point(66, 100);
             this.cbGosti.Name = "cbGosti";
@@ -87,6 +89,7 @@
             // 
             // cbLiga
             // 
+            this.cbLiga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLiga.FormattingEnabled = true;
             this.cbLiga.Location = new System.Drawing.Point(66, 264);
             this.cbLiga.Name = "cbLiga";
@@ -96,6 +99,7 @@
             // 
             // cbStadion
             // 
+            this.cbStadion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStadion.FormattingEnabled = true;
             this.cbStadion.Location = new System.Drawing.Point(66, 321);
             this.cbStadion.Name = "cbStadion";

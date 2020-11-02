@@ -34,9 +34,9 @@ namespace SeminarskiRS2.WinUI.Sjedala
 
         private void dgvSjedala_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvSjedala.SelectedRows[0].Cells[0].Value;
-            //var frm = new frmSjedalaDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvSjedala.SelectedRows[0].Cells[0].Value;
+            var frm = new frmSjedalaDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
 
         private void frmSjedala_Load(object sender, EventArgs e)

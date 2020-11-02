@@ -78,6 +78,7 @@
             this.dgvStadioni.Location = new System.Drawing.Point(3, 16);
             this.dgvStadioni.Name = "dgvStadioni";
             this.dgvStadioni.ReadOnly = true;
+            this.dgvStadioni.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStadioni.Size = new System.Drawing.Size(748, 301);
             this.dgvStadioni.TabIndex = 0;
             this.dgvStadioni.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvStadioni_MouseDoubleClick);

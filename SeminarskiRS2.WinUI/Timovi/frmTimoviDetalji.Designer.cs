@@ -65,6 +65,7 @@
             // 
             // cbLige
             // 
+            this.cbLige.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLige.FormattingEnabled = true;
             this.cbLige.Location = new System.Drawing.Point(34, 239);
             this.cbLige.Name = "cbLige";
@@ -74,6 +75,7 @@
             // 
             // cbStadioni
             // 
+            this.cbStadioni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStadioni.FormattingEnabled = true;
             this.cbStadioni.Location = new System.Drawing.Point(34, 306);
             this.cbStadioni.Name = "cbStadioni";

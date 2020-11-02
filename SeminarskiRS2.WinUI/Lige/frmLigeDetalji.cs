@@ -91,13 +91,19 @@ namespace SeminarskiRS2.WinUI.Lige
                 }
                 else
                 {
-                    MessageBox.Show("Unesena liga već postoji!");
+                    if (txtNaziv.Text == null || txtNaziv.Text == "")
+                    {
+                        MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unesena liga već postoji!");
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela!");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
         }
 
@@ -105,11 +111,11 @@ namespace SeminarskiRS2.WinUI.Lige
         {
             if (string.IsNullOrWhiteSpace(txtNaziv.Text))
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtNaziv, "Polje naziv je obavezno. ");
             }
             else if (!Regex.IsMatch(txtNaziv.Text, @"^[a-zA-Z0-9 .]+$"))//brojevi i/ili slova
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtNaziv, "U nazivu lige mogu biti samo brojevi i slova. ");
                 e.Cancel = true;
             }
             else
@@ -120,7 +126,7 @@ namespace SeminarskiRS2.WinUI.Lige
         {
             if (cbDrzave.SelectedItem == null)
             {
-                errorProvider1.SetError(cbDrzave, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbDrzave, "Morate odabrati državu. ");
             }
             else
                 errorProvider1.SetError(cbDrzave, null);

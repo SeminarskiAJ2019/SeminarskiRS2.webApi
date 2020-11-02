@@ -77,6 +77,7 @@
             this.dgvDrzave.Location = new System.Drawing.Point(3, 16);
             this.dgvDrzave.Name = "dgvDrzave";
             this.dgvDrzave.ReadOnly = true;
+            this.dgvDrzave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDrzave.Size = new System.Drawing.Size(728, 333);
             this.dgvDrzave.TabIndex = 0;
             this.dgvDrzave.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvDrzave_MouseDoubleClick);

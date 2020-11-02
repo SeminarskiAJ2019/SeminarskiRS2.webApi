@@ -58,6 +58,7 @@
             // 
             // cbStadioni
             // 
+            this.cbStadioni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStadioni.FormattingEnabled = true;
             this.cbStadioni.Location = new System.Drawing.Point(62, 176);
             this.cbStadioni.Name = "cbStadioni";

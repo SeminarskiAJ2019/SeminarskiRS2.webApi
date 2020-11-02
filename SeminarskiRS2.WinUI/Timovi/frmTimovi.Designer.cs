@@ -82,6 +82,7 @@
             this.dgvTimovi.Location = new System.Drawing.Point(3, 16);
             this.dgvTimovi.Name = "dgvTimovi";
             this.dgvTimovi.ReadOnly = true;
+            this.dgvTimovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTimovi.Size = new System.Drawing.Size(770, 331);
             this.dgvTimovi.TabIndex = 0;
             this.dgvTimovi.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvTimovi_MouseDoubleClick);

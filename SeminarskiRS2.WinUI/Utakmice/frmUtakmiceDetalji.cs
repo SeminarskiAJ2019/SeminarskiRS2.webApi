@@ -123,7 +123,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
                 {
                     foreach (var u in utakmiceSaIstimStadionom)
                     {
-                        if (u.UtakmicaID != _id)
+                        if (u.UtakmicaID == _id)
                             postojecaUtakmica = true;
                     }
                 }
@@ -205,7 +205,41 @@ namespace SeminarskiRS2.WinUI.Utakmice
                 }
                 else
                 {
-                    MessageBox.Show("Operacija nije uspjela");
+                    if (obrnutiisti)
+                        MessageBox.Show("Operacija nije uspjela, postoji utakmica sa istim timovima u bazi na isti datum. ");
+                    else if (isti)
+                        MessageBox.Show("Operacija nije uspjela, postoji utakmica sa istim timovima u bazi na isti datum. ");
+                    else if(postojecaUtakmica && _id.HasValue)
+                    {
+                        req.DatumOdigravanja = dtpDatum.Value.Date + dtpVrijeme.Value.TimeOfDay;
+                        req.VrijemeOdigravanja = dtpDatum.Value.Date + dtpVrijeme.Value.TimeOfDay;
+                        req.DomaciTimID = int.Parse(cbDomaci.SelectedValue.ToString());
+                        req.GostujuciTimID = int.Parse(cbGosti.SelectedValue.ToString());
+                        req.StadionID = int.Parse(cbStadion.SelectedValue.ToString());
+                        req.LigaID = int.Parse(cbLiga.SelectedValue.ToString());
+                        if (req.Slika == null && _id.HasValue)
+                        {
+                            Model.Utakmice a = await _apiService.GetById<Model.Utakmice>(_id);
+                            req.Slika = a.Slika;
+                            req.SlikaThumb = a.SlikaThumb;
+                        }
+
+                        //za slucaj da korisnik ne unese sliku
+                       
+
+                        int i = (int)_id;
+                        try
+                        {
+                            await _apiService.Update<dynamic>(i, req);
+                            MessageBox.Show("Operacija uspjela");
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Operacija nije uspjela. ");
+                        }
+                    }
+                    else if (postojecaUtakmica)
+                        MessageBox.Show("Operacija nije uspjela, postoji ista utakmica u bazi. ");
                     this.Close();
                 }
 
@@ -213,8 +247,12 @@ namespace SeminarskiRS2.WinUI.Utakmice
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela");
-                this.Close();
+                if (int.Parse(cbDomaci.SelectedValue.ToString()) == int.Parse(cbGosti.SelectedValue.ToString()))
+                    MessageBox.Show("Operacije nije uspjela, ne možete izabrati isti domaći i gostujući tim. ");
+                else
+                {
+                    MessageBox.Show("Operacija nije uspjela. Morate unijeti sva polja.");
+                }
             }
         }
 
@@ -239,7 +277,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (cbDomaci.SelectedItem == null && int.Parse(cbDomaci.SelectedValue.ToString()) != int.Parse(cbGosti.SelectedValue.ToString()))
             {
-                errorProvider1.SetError(cbDomaci, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbDomaci, "Morate odabrati domaći tim. ");
                 e.Cancel = true;
             }
             else
@@ -250,7 +288,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (cbGosti.SelectedItem == null)
             {
-                errorProvider1.SetError(cbGosti, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbGosti, "Morate odabrati gostujući tim. ");
                 e.Cancel = true;
             }
             else
@@ -261,7 +299,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (string.IsNullOrEmpty(dtpDatum.Value.Date.ToString()))
             {
-                errorProvider1.SetError(dtpDatum, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(dtpDatum, "Morate odabrati datum. ");
                 e.Cancel = true;
             }
             else
@@ -272,7 +310,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (string.IsNullOrEmpty(dtpVrijeme.Value.TimeOfDay.ToString()))
             {
-                errorProvider1.SetError(dtpVrijeme, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(dtpVrijeme, "Morate odabrati vrijeme. ");
                 e.Cancel = true;
             }
             else
@@ -283,7 +321,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (cbLiga.SelectedItem == null)
             {
-                errorProvider1.SetError(cbLiga, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbLiga, "Morate odabrati ligu. ");
                 e.Cancel = true;
             }
             else
@@ -294,7 +332,7 @@ namespace SeminarskiRS2.WinUI.Utakmice
         {
             if (cbStadion.SelectedItem == null)
             {
-                errorProvider1.SetError(cbStadion, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbStadion, "Morate odabrati stadion. ");
                 e.Cancel = true;
             }
             else

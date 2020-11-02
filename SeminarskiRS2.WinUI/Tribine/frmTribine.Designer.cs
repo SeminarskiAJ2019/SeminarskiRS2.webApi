@@ -83,6 +83,7 @@
             this.dgvTribine.Location = new System.Drawing.Point(3, 16);
             this.dgvTribine.Name = "dgvTribine";
             this.dgvTribine.ReadOnly = true;
+            this.dgvTribine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTribine.Size = new System.Drawing.Size(770, 324);
             this.dgvTribine.TabIndex = 0;
             this.dgvTribine.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvTribine_MouseDoubleClick);

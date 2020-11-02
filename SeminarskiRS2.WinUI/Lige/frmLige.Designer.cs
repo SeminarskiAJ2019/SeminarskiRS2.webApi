@@ -72,6 +72,7 @@
             this.dgvLige.Location = new System.Drawing.Point(3, 16);
             this.dgvLige.Name = "dgvLige";
             this.dgvLige.ReadOnly = true;
+            this.dgvLige.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLige.Size = new System.Drawing.Size(759, 341);
             this.dgvLige.TabIndex = 0;
             this.dgvLige.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvLige_MouseDoubleClick);

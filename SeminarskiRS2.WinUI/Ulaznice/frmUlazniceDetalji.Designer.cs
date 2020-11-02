@@ -48,6 +48,7 @@
             // 
             // cbUtakmica
             // 
+            this.cbUtakmica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUtakmica.FormattingEnabled = true;
             this.cbUtakmica.Location = new System.Drawing.Point(68, 51);
             this.cbUtakmica.Name = "cbUtakmica";
@@ -58,6 +59,7 @@
             // 
             // cbSektor
             // 
+            this.cbSektor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSektor.FormattingEnabled = true;
             this.cbSektor.Location = new System.Drawing.Point(68, 101);
             this.cbSektor.Name = "cbSektor";
@@ -68,6 +70,7 @@
             // 
             // cbSjedala
             // 
+            this.cbSjedala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSjedala.FormattingEnabled = true;
             this.cbSjedala.Location = new System.Drawing.Point(68, 161);
             this.cbSjedala.Name = "cbSjedala";
@@ -77,6 +80,7 @@
             // 
             // cbKorisnik
             // 
+            this.cbKorisnik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKorisnik.FormattingEnabled = true;
             this.cbKorisnik.Location = new System.Drawing.Point(68, 213);
             this.cbKorisnik.Name = "cbKorisnik";

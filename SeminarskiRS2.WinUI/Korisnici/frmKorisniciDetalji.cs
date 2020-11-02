@@ -88,8 +88,13 @@ namespace SeminarskiRS2.WinUI.Korisnici
                 if (entity != null)
                 {
                     MessageBox.Show("Uspješno izvršeno");
+                    this.Close();
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
 
         }
@@ -98,12 +103,12 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtIme.Text))
             {
-                errorProvider1.SetError(txtIme, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtIme, "Polje ime je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (!Regex.IsMatch(txtIme.Text, @"^[a-zA-Z ]+$"))
             {
-                errorProvider1.SetError(txtIme, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtIme, "Dozvoljeno je koristiti samo slova za ime. ");
                 e.Cancel = true;
             }
             else
@@ -116,12 +121,12 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtPrezime.Text))
             {
-                errorProvider1.SetError(txtPrezime, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtPrezime, "Polje prezime je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (!Regex.IsMatch(txtPrezime.Text, @"^[a-zA-Z -]+$"))
             {
-                errorProvider1.SetError(txtPrezime, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtPrezime, "Dozvoljeno je koristiti samo slova za prezime. ");
                 e.Cancel = true;
             }
             else
@@ -134,7 +139,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtTelefon.Text))
             {
-                errorProvider1.SetError(txtTelefon, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtTelefon, "Polje telefon je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (!Regex.IsMatch(txtTelefon.Text, @"^[+]{1}\d{3}[ ]?\d{2}[ ]?\d{3}[ ]?\d{3}"))
@@ -152,7 +157,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (comboBox.SelectedItem == null)
             {
-                errorProvider1.SetError(comboBox, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(comboBox, "Morate izabrati grad. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else
@@ -165,12 +170,12 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                errorProvider1.SetError(txtEmail, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtEmail, "Polje e-mail je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (!Regex.IsMatch(txtEmail.Text, @"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"))
             {
-                errorProvider1.SetError(txtEmail, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtEmail, "E-mail mora biti u formatu : text@nekastranica.com");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else
@@ -183,7 +188,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtKorisnickoIme.Text) || txtKorisnickoIme.Text.Length < 4)
             {
-                errorProvider1.SetError(txtKorisnickoIme, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtKorisnickoIme, "Polje korisničko ime je obavezno i mora imati barem 4 znaka. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
 
@@ -203,7 +208,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtLozinka.Text))
             {
-                errorProvider1.SetError(txtLozinka, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtLozinka, "Polje lozinka je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (txtLozinka.Text.Length < 4)
@@ -222,7 +227,7 @@ namespace SeminarskiRS2.WinUI.Korisnici
         {
             if (string.IsNullOrEmpty(txtPotvrdaLozinke.Text))
             {
-                errorProvider1.SetError(txtPotvrdaLozinke, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtPotvrdaLozinke, "Polje potvrda lozinke je obavezno. ");
                 e.Cancel = true;//zaustaviti procesiranje forme
             }
             else if (txtPotvrdaLozinke.Text != txtLozinka.Text)

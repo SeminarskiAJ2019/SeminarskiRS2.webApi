@@ -76,6 +76,7 @@
             this.dgvSektori.Location = new System.Drawing.Point(3, 16);
             this.dgvSektori.Name = "dgvSektori";
             this.dgvSektori.ReadOnly = true;
+            this.dgvSektori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSektori.Size = new System.Drawing.Size(770, 336);
             this.dgvSektori.TabIndex = 0;
             this.dgvSektori.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvSektori_MouseDoubleClick);

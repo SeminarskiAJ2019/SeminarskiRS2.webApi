@@ -41,9 +41,9 @@ namespace SeminarskiRS2.WinUI.Timovi
         }
         private void dgvTimovi_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvTimovi.SelectedRows[0].Cells[0].Value;
-           // var frm = new frmTimoviDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvTimovi.SelectedRows[0].Cells[0].Value;
+            var frm = new frmTimoviDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
 
         private async void cbLiga_SelectedIndexChanged(object sender, EventArgs e)

@@ -86,8 +86,7 @@ namespace SeminarskiRS2.WinUI.Tribine
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
         }
 
@@ -107,12 +106,12 @@ namespace SeminarskiRS2.WinUI.Tribine
         {
             if (string.IsNullOrEmpty(txtNaziv.Text))
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtNaziv, "Polje naziv je obavezno. ");
                 e.Cancel = true;
             }
             else if (!Regex.IsMatch(txtNaziv.Text, @"^[a-zA-Z0-9 -]+$"))//brojevi i/ili slova
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtNaziv, "Dozvoljeno je koristiti samo brojeve i/ili slova. ");
                 e.Cancel = true;
             }
             else
@@ -123,12 +122,12 @@ namespace SeminarskiRS2.WinUI.Tribine
         {
             if (string.IsNullOrEmpty(txtCijena.Text))
             {
-                errorProvider1.SetError(txtCijena, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtCijena, "Polje cijena je obavezno. ");
                 e.Cancel = true;
             }
             else if (!Regex.IsMatch(txtCijena.Text, @"^[0-9,]+$"))
             {
-                errorProvider1.SetError(txtCijena, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtCijena, "Dozvoljeno je koristiti samo brojeve. ");
                 e.Cancel = true;
             }
             else
@@ -139,7 +138,7 @@ namespace SeminarskiRS2.WinUI.Tribine
         {
             if (cbStadioni.SelectedItem == null)
             {
-                errorProvider1.SetError(cbStadioni, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbStadioni, "Morate odabrati stadion. ");
                 e.Cancel = true;
             }
             else

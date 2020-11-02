@@ -99,8 +99,7 @@ namespace SeminarskiRS2.WinUI.Sjedala
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
         }
 
@@ -108,12 +107,12 @@ namespace SeminarskiRS2.WinUI.Sjedala
         {
             if (string.IsNullOrWhiteSpace(txtOznaka.Text))
             {
-                errorProvider1.SetError(txtOznaka, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtOznaka, "Polje oznaka je obavezno. ");
                 e.Cancel = true;
             }
             else if (!Regex.IsMatch(txtOznaka.Text, @"^[a-zA-Z0-9 -]+$"))//brojevi i/ili slova
             {
-                errorProvider1.SetError(txtOznaka, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtOznaka, "Dozvoljeno je koristiti samo brojeve i/ili slova. ");
                 e.Cancel = true;
             }
             else
@@ -124,7 +123,7 @@ namespace SeminarskiRS2.WinUI.Sjedala
         {
             if (cbSektori.SelectedItem == null)
             {
-                errorProvider1.SetError(cbSektori, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbSektori, "Morate odabrati sektor. ");
                 e.Cancel = true;
             }
             else

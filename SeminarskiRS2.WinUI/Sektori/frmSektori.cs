@@ -44,9 +44,9 @@ namespace SeminarskiRS2.WinUI.Sektori
 
         private void dgvSektori_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvSektori.SelectedRows[0].Cells[0].Value;
-            //var frm = new frmSektoriDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvSektori.SelectedRows[0].Cells[0].Value;
+            var frm = new frmSektoriDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
 
         private async void cbTribine_SelectedIndexChanged(object sender, EventArgs e)

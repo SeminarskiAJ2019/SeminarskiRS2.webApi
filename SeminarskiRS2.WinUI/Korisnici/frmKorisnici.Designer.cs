@@ -30,8 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
-            this.btnPrikazi = new System.Windows.Forms.Button();
-            this.txtPretraga = new System.Windows.Forms.TextBox();
             this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,8 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrikazi = new System.Windows.Forms.Button();
+            this.txtPretraga = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -70,26 +70,10 @@
             this.dgvKorisnici.Location = new System.Drawing.Point(3, 16);
             this.dgvKorisnici.Name = "dgvKorisnici";
             this.dgvKorisnici.ReadOnly = true;
+            this.dgvKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKorisnici.Size = new System.Drawing.Size(753, 316);
             this.dgvKorisnici.TabIndex = 0;
             this.dgvKorisnici.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvKorisnici_MouseDoubleClick);
-            // 
-            // btnPrikazi
-            // 
-            this.btnPrikazi.Location = new System.Drawing.Point(704, 41);
-            this.btnPrikazi.Name = "btnPrikazi";
-            this.btnPrikazi.Size = new System.Drawing.Size(75, 23);
-            this.btnPrikazi.TabIndex = 1;
-            this.btnPrikazi.Text = "Prikaži";
-            this.btnPrikazi.UseVisualStyleBackColor = true;
-            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
-            // 
-            // txtPretraga
-            // 
-            this.txtPretraga.Location = new System.Drawing.Point(23, 41);
-            this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(100, 20);
-            this.txtPretraga.TabIndex = 2;
             // 
             // KorisnikID
             // 
@@ -140,6 +124,23 @@
             this.Grad.HeaderText = "Grad";
             this.Grad.Name = "Grad";
             this.Grad.ReadOnly = true;
+            // 
+            // btnPrikazi
+            // 
+            this.btnPrikazi.Location = new System.Drawing.Point(704, 41);
+            this.btnPrikazi.Name = "btnPrikazi";
+            this.btnPrikazi.Size = new System.Drawing.Size(75, 23);
+            this.btnPrikazi.TabIndex = 1;
+            this.btnPrikazi.Text = "Prikaži";
+            this.btnPrikazi.UseVisualStyleBackColor = true;
+            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
+            // 
+            // txtPretraga
+            // 
+            this.txtPretraga.Location = new System.Drawing.Point(23, 41);
+            this.txtPretraga.Name = "txtPretraga";
+            this.txtPretraga.Size = new System.Drawing.Size(100, 20);
+            this.txtPretraga.TabIndex = 2;
             // 
             // frmKorisnici
             // 

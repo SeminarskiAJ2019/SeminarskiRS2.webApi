@@ -76,6 +76,7 @@
             // 
             // cbDrzave
             // 
+            this.cbDrzave.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDrzave.FormattingEnabled = true;
             this.cbDrzave.Location = new System.Drawing.Point(92, 140);
             this.cbDrzave.Name = "cbDrzave";

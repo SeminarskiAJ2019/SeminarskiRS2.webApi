@@ -83,6 +83,7 @@
             this.dgvSjedala.Location = new System.Drawing.Point(3, 16);
             this.dgvSjedala.Name = "dgvSjedala";
             this.dgvSjedala.ReadOnly = true;
+            this.dgvSjedala.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSjedala.Size = new System.Drawing.Size(756, 327);
             this.dgvSjedala.TabIndex = 0;
             this.dgvSjedala.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvSjedala_MouseDoubleClick);

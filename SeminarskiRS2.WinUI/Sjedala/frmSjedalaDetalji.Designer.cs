@@ -49,6 +49,7 @@
             // 
             // cbSektori
             // 
+            this.cbSektori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSektori.FormattingEnabled = true;
             this.cbSektori.Location = new System.Drawing.Point(106, 102);
             this.cbSektori.Name = "cbSektori";

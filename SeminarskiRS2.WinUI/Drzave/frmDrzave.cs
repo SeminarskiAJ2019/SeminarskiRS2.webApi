@@ -32,9 +32,9 @@ namespace SeminarskiRS2.WinUI.Drzave
 
         private void dgvDrzave_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //var id = dgvDrzave.SelectedRows[0].Cells[0].Value;
-            //var frm = new frmDrzaveDetalji(int.Parse(id.ToString()));
-            //frm.Show();
+            var id = dgvDrzave.SelectedRows[0].Cells[0].Value;
+            var frm = new frmDrzaveDetalji(int.Parse(id.ToString()));
+            frm.Show();
         }
     }
 }

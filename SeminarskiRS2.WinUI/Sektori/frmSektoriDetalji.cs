@@ -94,8 +94,7 @@ namespace SeminarskiRS2.WinUI.Sektori
             }
             else
             {
-                MessageBox.Show("Operacija nije uspjela!");
-                this.Close();
+                MessageBox.Show("Operacija nije uspjela! Morate unijeti sva polja. ");
             }
         }
 
@@ -103,12 +102,12 @@ namespace SeminarskiRS2.WinUI.Sektori
         {
             if (string.IsNullOrWhiteSpace(txtNaziv.Text))
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(txtNaziv, "Polje naziv je obavezno. ");
                 e.Cancel = true;
             }
             else if (!Regex.IsMatch(txtNaziv.Text, @"^[a-zA-Z0-9 ]+$"))//brojevi i/ili slova
             {
-                errorProvider1.SetError(txtNaziv, Properties.Resources.NeispravanFormat);
+                errorProvider1.SetError(txtNaziv, "Naziv se može sastojati samo od brojeva i slova." );
                 e.Cancel = true;
             }
             else
@@ -119,7 +118,7 @@ namespace SeminarskiRS2.WinUI.Sektori
         {
             if (cbTribine.SelectedItem == null)
             {
-                errorProvider1.SetError(cbTribine, Properties.Resources.ObaveznoPolje);
+                errorProvider1.SetError(cbTribine, "Morate odabrati tribinu. ");
                 e.Cancel = true;
             }
             else
