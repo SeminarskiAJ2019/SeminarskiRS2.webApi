@@ -19,7 +19,24 @@ namespace SeminarskiRS2.WinUI
         {
             string path = Path.GetDirectoryName(Environment.CurrentDirectory);
             string[] path2 = path.Split(new[] { "\\" }, StringSplitOptions.None);
-            string p = path2[0] + "\\" + path2[1] + "\\" + path2[2] + "\\slike\\noimage.jpg";
+            string p;
+            if (path2[5] != null)
+            {
+                p = path2[0] + "\\" + path2[1] + "\\" + path2[2] + "\\" + path2[3] + "\\" + path2[4] + "\\" + path2[5] + "\\slike\\no_image.jpeg";
+            }
+            else if (path2[4] != null)
+            {
+                p = path2[0] + "\\" + path2[1] + "\\" + path2[2] +"\\" +  path2[3] + "\\" + path2[4] + "\\slike\\no_image.jpeg";
+            }
+            else if (path2[3] != null)
+            {
+                p = path2[0] + "\\" + path2[1] + "\\" + path2[2] + "\\" + path2[3] + "\\slike\\no_image.jpeg";
+            }
+            else
+            {
+                p = path2[0] + "\\" + path2[1] + "\\" + path2[2] + "\\slike\\no_image.jpeg";
+            }
+
             return Image.FromFile(p);
         }
 
